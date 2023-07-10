@@ -316,6 +316,41 @@ int MaxSubarraySum(vector<int>v)
 //     return ans;
 // }
 
+// [Better and logical]
+// vector<int>fact(1000010,1);
+// vector<int>inversefact(1000010,1);
+
+// void precompute(int n,int m)
+// {
+     
+
+//     // Fermat : (a^-1)%p  ==  (a^(p-2)) % p, if p is prime.... 
+
+//     // ncr % p = ( (n!)%p ) * ((r!)^-1)%p * (((n-r)!)^-1)%p
+
+//     // 1/a! = (1/a) * (1/(a-1)!) ==> ((a!)^-1)%p = (a^-1)%p * ((((a-1)!)^-1)%p)    // So, see by basic formula , no need to mug up.
+
+//     for(int i=2;i<=n;i++)
+//     {
+//         fact[i] = (fact[i-1]*i)%m;
+//     }
+
+//     int inverseM = mod(a,m-2,m);
+
+//     for(int i=2;i<=n;i++)
+//     {
+//         inversefact[i] = ((inverseM)*(inversefact[i-1]))%m;
+//     }
+
+// }
+
+// int ncr(int n,int r,int m)
+// {
+//     int ans = ((((fact(n)%m) * (inversefact(r)%m) )%m)  *  (inversefact(n-r)%m))%m;
+
+//     return ans;
+// }
+
 
 // int nCr3(int n, int r,int p) // use when %mod and N is big --> O(n+Q). (slight more optimised than striver, see ug)
 // {
