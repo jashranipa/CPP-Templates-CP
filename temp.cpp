@@ -389,3 +389,15 @@ int MaxSubarraySum(vector<int>v)
 //     ll ans = (((fact[n] * factorialNumInverse[r])% p) * factorialNumInverse[n - r])% p;
 //     return ans;
 // }
+
+// nCr Computation using Dp formula : nCr = (n-1)C(r) + (n-1)C(r-1) 
+// int nCr4(int N, int p) {
+//     vector<vector<int>> ncr(N + 1, vector<int> (N + 1,0));
+        
+//         ncr[0][0] = 1;
+//         for (int n = 1; n <= N; n++) {
+//             ncr[n][0] = 1;
+//             for (int r = 1; r <= N; r++) 
+//                 ncr[n][r] = (ncr[n - 1][r - 1] + ncr[n - 1][r]) % MOD;
+//         } 
+// }
